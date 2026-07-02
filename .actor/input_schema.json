@@ -1,0 +1,26 @@
+{
+    "title": "IndiaMART Supplier Lead Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchUrls": {
+            "title": "IndiaMART Search/Category URLs",
+            "type": "array",
+            "description": "List of IndiaMART category or search result URLs to scrape.",
+            "editor": "requestListSources",
+            "default": [{"url": "https://dir.indiamart.com/impcat/cotton-fabric.html"}],
+            "prefill": [{"url": "https://dir.indiamart.com/impcat/cotton-fabric.html"}]
+        },
+        "maxLeads": {
+            "title": "Max Leads to Extract",
+            "type": "integer",
+            "description": "Maximum number of supplier leads to extract across all URLs.",
+            "editor": "number",
+            "minimum": 1,
+            "maximum": 50000,
+            "default": 500,
+            "prefill": 500
+        }
+    },
+    "required": ["searchUrls"]
+}
